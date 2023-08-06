@@ -1,0 +1,34 @@
+// Variables
+
+$cols: 12;
+$gutter: 20px;
+
+// Devices
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+// Box-sizing
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+// Mixin media-queries
+
+@mixin device($size) {
+  @if $size == large {
+    @media screen and (min-width: $l-device) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media screen and (min-width: $m-device) and (max-width: ($l-device - 1)) {
+      @content;
+    }
+  } @else if $size == small {
+    @media screen and (max-width: ($m-device - 1)) {
+      @content;
+    }
+  }
+}

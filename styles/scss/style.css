@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+p {
+  color: blue;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  p {
+    color: rgb(182, 31, 169);
+  }
+}
+@media screen and (max-width: 759px) {
+  p {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
