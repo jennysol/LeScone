@@ -110,12 +110,33 @@ $s-device: 480px;
   }
   @include device(small) {
     max-width: $s-device;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include clearfix;
 }
 
 .container {
   @include container;
+}
+
+div {
+  background: rgba(0, 0, 0, 0.4);
+  min-height: 50px !important;
+  margin-bottom: 20px;
+}
+
+@mixin row {
+  position: relative;
+  margin-left: calc($gutter/2);
+  margin-right: calc($gutter/2);
+  @include device(small) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  @include clearfix;
+}
+
+.row {
+  @include row;
 }
