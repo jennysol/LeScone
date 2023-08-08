@@ -1,0 +1,35 @@
+// Closrs
+$light-beige: #edece4;
+$medium-beige: #cbc6b9;
+$dark-beige: #988c77;
+$gray: #2a2426;
+$green: #988c77;
+
+// Fontes
+$font-1: "PT Mono", monospace;
+$font-2: "Aref Ruqaa", serif;
+
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto + em;
+}
+
+@mixin type-1($size) {
+  font-family: $font-1;
+
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  }
+}
+
+@mixin type-2($size) {
+  font-family: $font-2;
+
+  @if $size == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+  } @else if $size == 24 {
+    font-size: em(24);
+    line-height: em(30, 24);
+  }
+}
