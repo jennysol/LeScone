@@ -295,5 +295,47 @@ body {
   border: 10px solid #cbc6b9;
   color: #2a2426;
 }
+@media screen and (max-width: 759px) {
+  body {
+    border: none;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.6666666667em;
+}
+
+.title {
+  font-family: "PT Mono", monospace;
+  font-size: 1.125em;
+  line-height: 1.6666666667em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 759px) {
+  .title {
+    margin-bottom: 40px;
+  }
+}
+.title::after {
+  content: "";
+  display: block;
+  width: 75%;
+  float: right;
+  height: 2px;
+  background: #2a2426;
+  margin-top: 14px;
+}
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .title::after {
+    width: 60%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
