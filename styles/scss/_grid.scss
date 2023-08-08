@@ -36,12 +36,12 @@ $s-device: 480px;
 // Function grid
 
 @function grid($col, $offset: false) {
-  $width: calc(($col / $cols) * 100) + "%";
+  $width: calc(($col / $cols * 100)) + "%";
   $result: calc(#{$width} - #{$gutter});
 
   @if $offset == offset {
     $gutter: calc($gutter / 2);
-    $result: calc(#{$result} + #{$gutter});
+    $result: calc(#{$width} + #{$gutter});
   }
 
   @return $result;
@@ -71,7 +71,7 @@ $s-device: 480px;
   }
 }
 
-[classˆ="grid-"] {
+[class^="grid-"] {
   @include grid-structure;
 }
 
@@ -120,16 +120,11 @@ $s-device: 480px;
   @include container;
 }
 
-div {
-  background: rgba(0, 0, 0, 0.4);
-  min-height: 50px !important;
-  margin-bottom: 20px;
-}
-
 @mixin row {
   position: relative;
-  margin-left: calc($gutter/2);
-  margin-right: calc($gutter/2);
+  margin-left: calc(-1 * $gutter / 2);
+  margin-right: calc(-1 * $gutter / 2);
+
   @include device(small) {
     margin-left: 0px;
     margin-right: 0px;
