@@ -1,0 +1,48 @@
+.menu {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include device(small) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.menu-item {
+  margin-bottom: 60px;
+  h2 {
+    @include type-2(24);
+    margin-bottom: 1em;
+  }
+  li {
+    @include type-1(18);
+    line-height: em(35, 18);
+    span {
+      font-family: $font-2;
+      color: $dark-beige;
+      display: inline-block;
+      width: 70px;
+      margin-right: 10px;
+      text-align: right;
+      margin-left: -80px;
+
+      @include device(small) {
+        margin-left: 0px;
+        width: auto;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    border: 10px solid $medium-beige;
+    position: absolute;
+    right: 0px;
+    margin-top: 50px;
+    @include device(large) {
+      right: 120px;
+    }
+    @include device(small) {
+      width: 120px;
+      margin-top: 0px;
+    }
+  }
+}
