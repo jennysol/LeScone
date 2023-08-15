@@ -1,0 +1,72 @@
+.contact {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  @include device(small) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.contact form {
+  label {
+    @include type-1(18);
+    display: block;
+  }
+  input[type="text"],
+  textarea {
+    @include type-1(18);
+    color: $gray;
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    border: 2px solid $dark-beige;
+    background: transparent;
+    margin-bottom: 1em;
+    &:hover,
+    &:focus {
+      outline: none;
+      border-color: $medium-beige;
+    }
+  }
+  textarea {
+    height: 120px;
+  }
+}
+
+input.button {
+  @include type-1(18);
+  cursor: pointer;
+  color: $dark-beige;
+  text-transform: uppercase;
+  border: 2px solid $dark-beige;
+  background: transparent;
+  display: block;
+  width: 200px;
+  padding-top: 5px;
+  @include box-shadow(5px 5px 0 -2px $medium-beige, 5px 5px 0 0 $dark-beige);
+  transition: 0.3s;
+  &:hover {
+    @include box-shadow(3px 3px 0 -2px $medium-beige, 3px 3px 0 0 $dark-beige);
+  }
+}
+
+.contact-info {
+  display: inline-block;
+  color: $dark-beige;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  @include device(large) {
+    float: right;
+    text-align: right;
+    margin-top: -3em;
+  }
+}
+
+.contact-mapa {
+  display: block;
+  @include box-shadow(0 0 0 10px $medium-beige);
+  clear: both;
+  img {
+    width: 100%;
+  }
+}
